@@ -14,7 +14,7 @@ jobs:
           export HMCL_VERSION=`echo ${{ github.ref }} | awk '{print substr($0,12)}'`
           echo "HMCL_VERSION=$HMCL_VERSION" >> $GITHUB_ENV
 
-          if [ -z `echo "3.3.182" | grep "^[0-9]\.[0-9]\.[0-9]\{3\}\$"` ]; then
+          if [ -z `echo $HMCL_VERSION | grep "^[0-9]\.[0-9]\.[0-9]\{3\}\$"` ]; then
             exit 1
           fi
 
@@ -29,8 +29,9 @@ jobs:
           DOWNLOAD_BASE_URL: https://ci.huangyuhui.net/job/HMCL/${{ env.HMCL_BUILD_NUMBER }}/artifact/HMCL/build/libs
       - name: Generate release note
         run: |
-          echo "HMCL v$HMCL_VERSION\n" >> RELEASE_NOTE
-          echo "The full changelogs can be found on the website: https://hmcl.huangyuhui.net/changelog/dev.html\n" >> RELEASE_NOTE
+          echo "HMCL v$HMCL_VERSION" >> RELEASE_NOTE
+          echo "" >> RELEASE_NOTE
+          echo "The full changelogs can be found on the website: https://hmcl.huangyuhui.net/changelog/dev.html" >> RELEASE_NOTE
           echo "Notice: changelogs are written in Chinese." >> RELEASE_NOTE
       - name: Create release
         uses: softprops/action-gh-release@v1
