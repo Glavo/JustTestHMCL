@@ -29,8 +29,9 @@ jobs:
           DOWNLOAD_BASE_URL: https://ci.huangyuhui.net/job/HMCL/${{ env.HMCL_BUILD_NUMBER }}/artifact/HMCL/build/libs
       - name: Generate release note
         run: |
-          echo "v$HMCL_VERSION" >> RELEASE_NOTE
+          echo "HMCL v$HMCL_VERSION" >> RELEASE_NOTE
           echo "The release notes can be found on the website: https://hmcl.huangyuhui.net/changelog/dev.html" >> RELEASE_NOTE
+          echo "Notice: changelogs are written in Chinese." >> RELEASE_NOTE
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:
