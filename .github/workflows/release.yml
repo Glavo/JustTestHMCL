@@ -27,9 +27,14 @@ jobs:
           wget "$DOWNLOAD_BASE_URL/HMCL-$HMCL_VERSION.jar.sha1"
         env:
           DOWNLOAD_BASE_URL: https://ci.huangyuhui.net/job/HMCL/${{ env.HMCL_BUILD_NUMBER }}/artifact/HMCL/build/libs
+      - name: Generate release note
+        run: |
+          echo "v$HMCL_VERSION" >> RELEASE_NOTE
+          echo "The release notes can be found on the website: https://hmcl.huangyuhui.net/changelog/dev.html" >> RELEASE_NOTE
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:
+          body_path: RELEASE_NOTE
           files: |
             HMCL-${{ env.HMCL_VERSION }}.exe
             HMCL-${{ env.HMCL_VERSION }}.exe.sha1
