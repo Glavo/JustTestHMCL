@@ -39,21 +39,22 @@ body:
       label: 游戏版本
       description: 如果您是在启动通过 HMCL 启动器自动下载的游戏时遇到了问题，请输入您所启动的游戏版本。
       placeholder: 例如：1.17.1
-  - type: textarea
+  - type: input
     id: game-modify
     attributes:
       label: 对游戏所做的修改
-      description: 如果您为游戏安装了 OptFine、Forge，或者是其他的 mod，请将您所做的修改填入下方。
+      description: 如果您为游戏安装了 OptiFine、Forge，或者是其他的 mod，请将您所做的修改填入下方。
+      placeholder: 例如：OptiFine HD_U_G9, Rift
   - type: textarea
     id: game-crash-report
     attributes:
       label: 游戏崩溃报告
-      description: 如果有游戏崩溃报告的话，请填入下方。
+      description: 如果有游戏崩溃报告的话，请填入（或将文件拖入）下方。
   - type: textarea
     id: hmcl-crash-report
     attributes:
       label: 启动器崩溃报告
-      description: 如果有启动器崩溃报告的话，请填入下方。
+      description: 如果有启动器崩溃报告的话，请填入（或将文件拖入）下方。
   - type: textarea
     id: hmcl-logs
     attributes:
@@ -63,5 +64,5 @@ body:
     id: bug-report
     attributes:
       label: 问题描述
-      description: 请尽可能地详细描述问题，包括您是怎么遇到这个 BUG 的，以及前面没有写清楚的遇到问题的环境。
+      description: 请尽可能地详细描述问题，特别是您是怎么遇到这个 BUG 的。
 
