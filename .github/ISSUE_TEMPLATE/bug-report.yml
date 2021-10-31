@@ -20,12 +20,6 @@ body:
     validations:
       required: true
   - type: input
-    id: java-version
-    attributes:
-      label: Java
-      description: 请输入您所使用的 Java 的名称与版本。
-      placeholder: 例如：LibericaJDK Full JDK 17.0.1
-  - type: input
     id: platform
     attributes:
       label: 平台
@@ -33,6 +27,12 @@ body:
       placeholder: 例如：Windows 11
     validations:
       required: true
+  - type: input
+    id: java-version
+    attributes:
+      label: Java
+      description: 请输入您所使用的 Java 的名称与版本。
+      placeholder: 例如：LibericaJDK Full JDK 17.0.1
   - type: input
     id: game-version
     attributes:
