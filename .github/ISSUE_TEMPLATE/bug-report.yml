@@ -1,5 +1,5 @@
 name: Bug 反馈
-description: 反馈一个 Bug。
+description: 反馈一个 Bug。为了提高反馈效率，请优先在开黑啦或者或 Discord 频道中反馈。
 body:
   - type: markdown
     attributes:
