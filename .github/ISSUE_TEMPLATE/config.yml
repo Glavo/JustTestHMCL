@@ -1,6 +1,8 @@
 blank_issues_enabled: true
 contact_links:
-  - name: Discord 频道
-    url: https://discord.gg/jVvC7HfM6U
   - name: 开黑啦频道
     url: https://kaihei.co/Kx7n3t
+    about: HMCL 的开黑啦频道。
+  - name: Discord 频道
+    url: https://discord.gg/jVvC7HfM6U
+    about: HMCL 的 Discord 频道。
