@@ -1,0 +1,19 @@
+name: Test Sync to Gitee
+on: push
+jobs:
+  run:
+    name: Gitee Sync
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v1
+      - name: Mirror Github to Gitee
+        uses: Yikun/hub-mirror-action@master
+        with:
+          src: github/Glavo
+          dst: gitee/hmcl-sync
+          static_list: 'JustTestHMCL'
+          force_update: true
+          debug: true
+          dst_key: ${{ secrets.GITEE_SYNC_BOT_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_SYNC_BOT_TOKEN }}
