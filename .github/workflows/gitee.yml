@@ -5,10 +5,8 @@ jobs:
     name: Gitee Sync
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout source code
-        uses: actions/checkout@v1
       - name: Mirror Github to Gitee
-        uses: Yikun/hub-mirror-action@master
+        uses: Yikun/hub-mirror-action@v1.1
         with:
           src: github/Glavo
           dst: gitee/hmcl-sync
@@ -17,3 +15,4 @@ jobs:
           debug: true
           dst_key: ${{ secrets.GITEE_SYNC_BOT_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_SYNC_BOT_TOKEN }}
+          cache_path: /github/workspace/hub-mirror-cache
