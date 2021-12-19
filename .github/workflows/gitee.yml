@@ -1,5 +1,8 @@
 name: Test Sync to Gitee
-on: push
+
+on:
+  push
+
 jobs:
   run:
     name: Gitee Sync
